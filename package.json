@@ -4,7 +4,7 @@
   "productName": "Gerador Sequêncial de Fotos",
   "description": "Gerador Sequêncial de Fotos",
   "main": "bin/main.js",
-  "author": "Tegra ME",
+  "author": "Daniel Prado",
   "scripts": {
     "precommit": "concurrently --prefix \"[{name}]\" --names \"LINT,TSC\" -c \"bgBlue.bold,bgMagenta.bold\" \"yarn gulp typescript-lint\" \"yarn tsc -- --noEmit\"",
     "postmerge": "yarn --ignore-scripts && npm run postinstall",
