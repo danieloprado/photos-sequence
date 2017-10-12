@@ -1,0 +1,11 @@
+node_modules
+bin
+dist
+maps
+app-builds
+db/database.db
+app/**/*.js
+app/**/*.map
+*.log
+temp
+content

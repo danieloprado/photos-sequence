@@ -1,0 +1,67 @@
+﻿$FontPath: "./fonts" !default;
+$FontName: "Roboto" !default;
+$FontVersion: "1.1.0" !default;
+
+
+@mixin fontdef-woff($FontPath, $FontName, $FontVersion: "1.0.0", $FontType: "Regular") {
+    src: url('#{$FontPath}/#{$FontName}-#{$FontType}.woff2?v=#{$FontVersion}') format('woff2');
+}
+
+/* BEGIN Bold */
+@font-face {
+    font-family: Roboto;
+    @include fontdef-woff($FontPath, $FontName, $FontVersion, "Bold");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    @include fontdef-woff($FontPath, $FontName, $FontVersion, "Bold");
+    font-weight: bold;
+    font-style: normal;
+}
+/* END Bold */
+
+/* BEGIN Light */
+@font-face {
+    font-family: Roboto;
+    @include fontdef-woff($FontPath, $FontName, $FontVersion, "Light");
+    font-weight: 300;
+    font-style: normal;
+}
+/* END Light */
+
+/* BEGIN Light Italic */
+@font-face {
+    font-family: Roboto;
+    @include fontdef-woff($FontPath, $FontName, $FontVersion, "LightItalic");
+    font-weight: 300;
+    font-style: italic;
+}
+/* END Light Italic */
+
+/* BEGIN Medium */
+@font-face {
+    font-family: Roboto;
+    @include fontdef-woff($FontPath, $FontName, $FontVersion, "Medium");
+    font-weight: 500;
+    font-style: normal;
+}
+/* END Medium */
+
+/* BEGIN Regular */
+@font-face {
+    font-family: Roboto;
+    @include fontdef-woff($FontPath, $FontName, $FontVersion, "Regular");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    @include fontdef-woff($FontPath, $FontName, $FontVersion, "Regular");
+    font-weight: normal;
+    font-style: normal;
+}
+/* END Regular */

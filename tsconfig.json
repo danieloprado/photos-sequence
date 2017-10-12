@@ -1,0 +1,33 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "removeComments": false,
+    "noEmitOnError": true,
+    "importHelpers": true,
+    "alwaysStrict": true,
+    "skipLibCheck": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "rootDir": "app",
+    "outDir": "bin",
+    "noUnusedLocals": true,
+    "lib": [
+      "dom",
+      "es2017"
+    ],
+    "noStrictGenericChecks": true
+  },
+  "exclude": [
+    "node_modules",
+    "bower_components"
+  ],
+  "include": [
+    "app/**/*.ts"
+  ]
+}

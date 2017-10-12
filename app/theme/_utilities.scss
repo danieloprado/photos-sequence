@@ -1,0 +1,130 @@
+.p-none {
+  padding: 0;
+}
+
+.p-l-md {
+  padding-left: 20px;
+}
+
+.p-l-none {
+  padding-left: 0;
+}
+
+.p-r-none {
+  padding-right: 0;
+}
+
+.p-t-none {
+  padding-top: 0;
+}
+
+.p-b-none {
+  padding-bottom: 0;
+}
+
+.p-t-md {
+  padding-top: 20px;
+}
+
+.p-t-lg {
+  padding-top: 50px;
+}
+
+.p-b-sm {
+  padding-bottom: 10px;
+}
+
+.p-sm {
+  padding: 10px;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.m-none {
+  margin: 0;
+}
+
+.m-t-none {
+  margin-top: 0;
+}
+
+.m-b-none {
+  margin-bottom: 0;
+}
+
+.m-r-none {
+  margin-right: 0 !important;
+}
+
+.m-t-lg {
+  margin-top: 40px;
+}
+
+.m-t-md {
+  margin-top: 20px;
+}
+
+.m-r-xs {
+  margin-right: 10px;
+}
+
+.m-input {
+  margin-top: 19px !important;
+}
+
+.text-danger-hover {
+  transition: .5s;
+  &:hover {
+    color: $danger !important;
+  }
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.no-record {
+  opacity: .8;
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 10px;
+  &:before,
+  &:after {
+    content: ' - ';
+  }
+}
+
+.pre {
+  white-space: pre-line;
+}
+
+.rotate {
+  animation-name: rotation;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.table-striped tr:nth-child(even) td {
+  background: $background-color;
+}

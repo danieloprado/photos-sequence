@@ -1,0 +1,49 @@
+page-toolbar
+  div.md-toolbar-tools.p-r-none(layout="row", layout-align="space-between center")
+    div(flex="none")
+      md-icon.m-r-xs(md-svg-icon="folder-multiple-image")
+    div(flex="none")
+      p.m-none.top-small-title(ng-click="$ctrl.errorTest()")
+        | Gerador Sequêncial de Fotos
+    div(flex)
+
+md-card
+  form(md-form-validator, ng-submit="$ctrl.submit()")
+    md-card-content
+      div(layout="column" layout-gt-sm="row", layout-wrap)
+        div(flex)
+          md-input-container.md-block
+            label Pasta com as fotos
+            input(ng-model="$ctrl.model.source" name="source" readonly required)
+            md-messages
+        div(flex="none")
+          md-button.md-accent.md-raised(type="button", ng-click="$ctrl.selectFolder('source')")
+            md-icon.m-r-xs(md-svg-icon="folder")
+            | Selecionar pasta
+
+      div(layout="column" layout-gt-sm="row", layout-wrap)
+        div(flex)
+          md-input-container.md-block
+            label Pasta de Destino
+            input(ng-model="$ctrl.model.target" name="target" readonly required)
+            md-messages
+        div(flex="none")
+          md-button.md-accent.md-raised(type="button", ng-click="$ctrl.selectFolder('target')")
+            md-icon.m-r-xs(md-svg-icon="folder")
+            | Selecionar pasta
+
+      div(layout="column" layout-gt-sm="row", layout-wrap)
+        div(flex)
+          md-input-container.md-block
+            label Nome da pasta final
+            input(ng-model="$ctrl.model.folderName", name="folderName", required)
+            md-messages
+
+        div(flex)
+          md-input-container.md-block
+            label Quantidade de pastas
+            input(ng-model="$ctrl.model.quantity", type="number", min="1", max="1000", name="quantity", required)
+            md-messages
+
+      div.text-right
+        md-button.md-raised.md-accent(type="submit") Processar

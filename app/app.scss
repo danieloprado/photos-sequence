@@ -1,0 +1,166 @@
+@import './theme/fonts/roboto/style.scss';
+@import "./theme/_variables.scss";
+@import "./theme/_mixin.scss";
+@import "./theme/_utilities.scss";
+@import "./theme/_components.scss";
+@import "./components/loader/loader.scss";
+
+.padding {
+  padding: 8px;
+}
+
+[ng-click] {
+  cursor: pointer;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+body {
+  color: $color;
+  background: $background-color;
+  fill: $color;
+}
+
+.main-tabs-header {
+  md-toolbar.main-toolbar:before {
+    display: none;
+  }
+  .header-tabs-content md-tabs-wrapper {
+    display: none;
+  }
+}
+
+.error-message {
+  margin-bottom: 20px;
+  color: $danger;
+}
+
+.content-hover {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  animation-duration: .5s;
+  background: $white;
+  transition: .3s;
+}
+
+.md-sidenav-left {
+  max-width: 250px;
+  color: $side-color;
+  background: $side-background;
+  fill: $side-color;
+  header {
+    background: $side-header;
+    fill: white;
+  }
+  .version {
+    color: $white;
+    font-size: 11px;
+    text-align: right;
+    padding: 10px;
+    opacity: 0.8;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.top-small-title {
+  line-height: 19px;
+  user-select: none;
+  outline: none;
+  small {
+    font-size: 14px;
+  }
+}
+
+.main-content {
+  max-height: calc(100vh - 50px);
+  box-sizing: border-box;
+
+  >ui-view {
+    display: block; // padding-bottom: 90px;
+    background: none;
+  }
+
+
+  @include media-max-breakpoints(xs) {
+    max-height: calc(100vh - 57px);
+
+    >ui-view {
+      margin: -5px;
+      padding: 0; // padding-bottom: 70px;
+    }
+  }
+
+  @include media-min-breakpoints(md) {
+    max-height: calc(100vh - 65px);
+  }
+}
+
+.initial-loader {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+
+  md-progress-circular {
+    margin: auto !important;
+  }
+}
+
+.badge-color {
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.card-indicator {
+  text-align: center;
+
+  &.md-accent {
+    background: $accent;
+    color: $white;
+  }
+
+  md-progress-circular {
+    margin: 8px auto;
+  }
+
+  md-progress-circular path {
+    stroke: $white;
+  }
+
+  md-icon {
+    height: 40px;
+    width: 40px;
+    opacity: 0.9;
+  }
+
+  .number {
+    margin: 0;
+    font-size: 30px;
+  }
+
+  .description {
+    margin: 0;
+  }
+}
+
+label.md-label,
+p.md-label {
+  font-size: 12px;
+  margin-bottom: 5px;
+  opacity: 0.7;
+}

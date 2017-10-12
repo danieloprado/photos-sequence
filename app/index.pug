@@ -1,0 +1,29 @@
+doctype html
+html(ng-app="App")
+  head
+    meta(charset='UTF-8')
+    title Gerador Sequêncial de Fotos
+    link(rel="stylesheet", href="../node_modules/animate.css/animate.min.css")
+    link(rel="stylesheet", href="../node_modules/angular-material/angular-material.min.css")
+    link(rel="stylesheet", href="./app.css")
+  body
+    app-loader-component
+
+    div(layout="column", flex, ng-class="{ 'main-tabs-header': headerTabs.tabs.length > 0 }")
+      md-toolbar
+        page-toolbar-output
+
+      md-content.scroll-y.main-content(layout-padding,md-scroll-y, scroll-top)
+        ui-view
+          div.initial-loader
+            md-progress-circular(class="md-accent", md-diameter="60", md-mode="indeterminate")
+            p.md-sunhead Carregando
+
+  script.
+    require('./app.js');
+
+    document.addEventListener("keydown", function (e) {
+      if (e.which === 123) {
+        require('electron').remote.getCurrentWindow().toggleDevTools();
+      }
+    });
