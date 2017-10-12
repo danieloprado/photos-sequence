@@ -1,6 +1,6 @@
 {
   "name": "photos-sequence",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "productName": "Gerador Sequêncial de Fotos",
   "description": "Gerador Sequêncial de Fotos",
   "main": "bin/main.js",
@@ -22,7 +22,8 @@
     "appId": "br.com.danieloprado.photos-sequence",
     "asar": true,
     "dmg": {
-      "contents": [{
+      "contents": [
+        {
           "x": 410,
           "y": 150,
           "type": "link",
@@ -69,6 +70,7 @@
     "@types/node": "8.0.34",
     "@types/raven": "2.1.2",
     "@types/raven-js": "3.10.0",
+    "@types/uuid": "^3.4.2",
     "concurrently": "3.5.0",
     "electron": "1.7.9",
     "electron-builder": "19.36.0",
@@ -103,6 +105,7 @@
     "md-form-validator": "0.1.15",
     "raven-js": "3.18.1",
     "source-map-support": "0.5.0",
-    "tslib": "1.8.0"
+    "tslib": "1.8.0",
+    "uuid": "^3.1.0"
   }
 }

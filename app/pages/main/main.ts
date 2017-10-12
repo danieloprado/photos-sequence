@@ -26,8 +26,8 @@ class MainController implements angular.IComponentController {
       this.model = {
         folderName: 'Paris',
         quantity: 50,
-        source: '/home/prado/Pictures/apps',
-        target: '/home/prado/Pictures/dest'
+        source: 'C:\\Users\\daniel\\Pictures\\Aps',
+        target: 'C:\\Users\\daniel\\Pictures\\dest'
       };
     }
   }

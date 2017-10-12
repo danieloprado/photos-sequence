@@ -2,6 +2,7 @@ import { ServiceError } from '../errors/service';
 import { FileService } from './file';
 import * as lodash from 'lodash';
 import * as path from 'path';
+import * as uuid from 'uuid';
 
 export class GeneratorService {
   constructor(
@@ -24,7 +25,7 @@ export class GeneratorService {
 
       for (let y = 0; y < quantity; y++) {
         const finalFolder = `${targetFolder} ${y + 1}`;
-        const finalImage = `${(x + 1) + (y * content.length)}${path.extname(image)}`;
+        const finalImage = `${(x + 1) + (y * content.length)}-${uuid.v4()}${path.extname(image)}`;
 
         if (x === 0) {
           await this.fileService.createFolder(finalFolder);
